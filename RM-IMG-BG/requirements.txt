@@ -1,0 +1,6 @@
+rembg
+Pillow
+numpy
+opencv-python-headless
+onnxruntime
+concurrent

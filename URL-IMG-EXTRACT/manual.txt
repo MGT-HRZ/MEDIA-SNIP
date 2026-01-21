@@ -15,12 +15,16 @@ Make sure Google Chrome is Installed.
 For LINUX
 
 RUN:
-sudo apt install -y \
-  fonts-liberation \
-  libnss3 \
-  libxss1 \
-  libatk-bridge2.0-0t64 \
-  libgtk-3-0t64 \
-  libgbm1 \
-  libpangocairo-1.0-0 \
-  libx11-xcb1
+1. wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+2. sudo apt install -y ./google-chrome-stable_current_amd64.deb
+
+3.  sudo apt install -y \
+    fonts-liberation \
+    libnss3 \
+    libxss1 \
+    libatk-bridge2.0-0t64 \
+    libgtk-3-0t64 \
+    libgbm1 \
+    libpangocairo-1.0-0 \
+    libx11-xcb1

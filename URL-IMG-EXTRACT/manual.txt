@@ -28,3 +28,7 @@ RUN:
     libgbm1 \
     libpangocairo-1.0-0 \
     libx11-xcb1
+
+4. python3 -m venv env
+
+5. source env/bin/activate

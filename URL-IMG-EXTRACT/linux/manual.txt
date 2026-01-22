@@ -1,0 +1,30 @@
+For LINUX
+
+RUN:
+1. wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+2. sudo apt install -y ./google-chrome-stable_current_amd64.deb
+
+3.  sudo apt install -y \
+    fonts-liberation \
+    libnss3 \
+    libxss1 \
+    libatk-bridge2.0-0t64 \
+    libgtk-3-0t64 \
+    libgbm1 \
+    libpangocairo-1.0-0 \
+    libx11-xcb1
+
+4. sudo apt install python3 python3-venv python3-pip
+
+5. python3 -m venv env
+
+6. source env/bin/activate
+
+7. pip install -r requirements.txt
+
+8. pip install Pillow
+
+9. update the main.py file
+
+10. python3 main.py

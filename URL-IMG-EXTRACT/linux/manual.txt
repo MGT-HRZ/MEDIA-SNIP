@@ -25,6 +25,8 @@ RUN:
 
 8. pip install Pillow
 
-9. update the main.py file
+9. pip install tqdm
 
-10. python3 main.py
+10. update the main.py file
+
+11. python3 main.py

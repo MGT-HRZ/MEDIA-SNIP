@@ -6,8 +6,9 @@ beautifulsoup4==4.12.2
 selenium==4.21.0
 
 # Image handling
-Pillow==10.0.0
-# If can't run "sudo apt install Pillow"
+# Pillow==10.0.0
+# If can't run "sudo pip install Pillow"
 
 # URL parsing and packaging
+
 packaging==23.1

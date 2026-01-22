@@ -4,6 +4,10 @@ from bs4 import BeautifulSoup
 from zipfile import ZipFile
 from tqdm import tqdm  # Import tqdm for progress bar
 
+import subprocess
+import sys
+
+
 def process_images():
     # Step 1: Parse combined_images.html
     html_file = "combined_images.html"
@@ -42,7 +46,6 @@ def process_images():
 
                 file_path = os.path.join(download_folder, file_name)
 
-                # Display the current file being downloaded in the tqdm description
                 tqdm.write(f"Downloading: {file_name}")
 
                 with open(file_path, "wb") as img_file:
@@ -68,7 +71,7 @@ def process_images():
     corrupt_input = input("Do you want to corrupt the images now? (y/n): ").strip().lower()
     if corrupt_input != "y":
         print("Corruption skipped.")
-        return  # Exit the function
+        return
 
     # Step 5: Rename to trash_*.jpg and corrupt
     print("Renaming to trash_*.jpg and corrupting images...")
@@ -95,5 +98,18 @@ def process_images():
     else:
         print("Corrupted images retained.")
 
+
 if __name__ == "__main__":
     process_images()
+
+    # ---------------------------------
+    # OPTIONAL: run next script afterward
+    # ---------------------------------
+    MAIN_SCRIPT = "main5_linux.py"
+
+    run_main = input(
+        f"Do you want to run {MAIN_SCRIPT} now? (y/n): "
+    ).strip().lower()
+
+    if run_main == "y":
+        subprocess.run([sys.executable, MAIN_SCRIPT])

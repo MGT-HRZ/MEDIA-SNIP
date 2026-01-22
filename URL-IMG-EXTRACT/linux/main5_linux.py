@@ -7,6 +7,9 @@ from PIL import Image
 from io import BytesIO
 import os
 
+import subprocess
+import sys
+
 # -------------------------
 # Helper functions
 # -------------------------
@@ -188,3 +191,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # ---------------------------------
+    # OPTIONAL: run batch_image_zipper_v2.py
+    # ---------------------------------
+    run_zipper = input("Do you want to run batch_image_zipper_v2.py now? (y/n): ").strip().lower()
+    if run_zipper == "y":
+        subprocess.run([sys.executable, "batch_image_zipper_v2.py"])
